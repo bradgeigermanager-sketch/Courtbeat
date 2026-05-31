@@ -1,0 +1,37 @@
+[project]
+name = "courtbeat"
+version = "0.3.0"
+description = "A modular, schema-driven ingestion framework for courts, arrests, jails, and crime-beat news media."
+authors = [
+    { name = "Brad", email = "example@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+
+dependencies = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "PyYAML>=6.0",
+    "lxml>=5.0.0",
+    "dataclasses-json>=0.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+    "ruff>=0.3.0",
+    "mypy>=1.8.0",
+]
+
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["courtbeat"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I"]
