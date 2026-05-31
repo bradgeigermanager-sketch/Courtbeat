@@ -1,0 +1,23 @@
+churchill_district:
+  type: court
+  connector: courtbeat.connectors.courts.churchill_district:ChurchillDistrictConnector
+  retrieval: courtbeat.retrieval.courts.churchill_district_routines:ChurchillDistrictRoutines
+  transformer: courtbeat.transformers.court_records:CourtRecordTransformer
+  enabled: true
+  tags: [district, nevada, hearings, calendars]
+
+washoe_district:
+  type: court
+  connector: courtbeat.connectors.courts.washoe_district:WashoeDistrictConnector
+  retrieval: courtbeat.retrieval.courts.washoe_district_routines:WashoeDistrictRoutines
+  transformer: courtbeat.transformers.court_records:CourtRecordTransformer
+  enabled: false
+  tags: [district, nevada, odyssey]
+
+clark_district:
+  type: court
+  connector: courtbeat.connectors.courts.clark_district:ClarkDistrictConnector
+  retrieval: courtbeat.retrieval.courts.clark_district_routines:ClarkDistrictRoutines
+  transformer: courtbeat.transformers.court_records:CourtRecordTransformer
+  enabled: false
+  tags: [district, nevada, odyssey]
