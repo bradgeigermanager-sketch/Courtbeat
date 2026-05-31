@@ -1,0 +1,23 @@
+fallon_post:
+  type: news
+  connector: courtbeat.connectors.news.fallon_post:FallonPostConnector
+  retrieval: courtbeat.retrieval.news.fallon_post_routines:FallonPostRoutines
+  transformer: courtbeat.transformers.news_media:NewsMediaTransformer
+  enabled: true
+  tags: [court_reports, sheriff_logs]
+
+reno_gazette:
+  type: news
+  connector: courtbeat.connectors.news.reno_gazette:RenoGazetteConnector
+  retrieval: courtbeat.retrieval.news.reno_gazette_routines:RenoGazetteRoutines
+  transformer: courtbeat.transformers.news_media:NewsMediaTransformer
+  enabled: false
+  tags: [crime, local_news]
+
+las_vegas_review_journal:
+  type: news
+  connector: courtbeat.connectors.news.las_vegas_review:LasVegasReviewConnector
+  retrieval: courtbeat.retrieval.news.las_vegas_review_routines:LasVegasReviewRoutines
+  transformer: courtbeat.transformers.news_media:NewsMediaTransformer
+  enabled: false
+  tags: [crime, metro, courts]
