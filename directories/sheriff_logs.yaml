@@ -1,0 +1,7 @@
+churchill_sheriff:
+  type: sheriff
+  connector: courtbeat.connectors.sheriff.churchill_sheriff:ChurchillSheriffConnector
+  retrieval: courtbeat.retrieval.sheriff.churchill_sheriff_routines:ChurchillSheriffRoutines
+  transformer: courtbeat.transformers.sheriff_logs:SheriffLogTransformer
+  enabled: true
+  tags: [arrests, bookings, logs, nevada]
