@@ -1,0 +1,15 @@
+washoe_jail:
+  type: jail
+  connector: courtbeat.connectors.jails.washoe_jail:WashoeJailConnector
+  retrieval: courtbeat.retrieval.jails.washoe_jail_routines:WashoeJailRoutines
+  transformer: courtbeat.transformers.jail_records:JailRecordTransformer
+  enabled: true
+  tags: [inmates, bookings, nevada]
+
+clark_jail:
+  type: jail
+  connector: courtbeat.connectors.jails.clark_jail:ClarkJailConnector
+  retrieval: courtbeat.retrieval.jails.clark_jail_routines:ClarkJailRoutines
+  transformer: courtbeat.transformers.jail_records:JailRecordTransformer
+  enabled: false
+  tags: [inmates, bookings, nevada]
